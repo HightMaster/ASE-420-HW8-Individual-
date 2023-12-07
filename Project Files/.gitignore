@@ -2,4 +2,7 @@
 *.pyc
 venv
 Instruction Files
-.pytest_chache
+.pytest_cache
+tasks.db
+src/tasks.db
+test/tasks.db
