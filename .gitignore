@@ -1,0 +1,5 @@
+.idea
+*.pyc
+venv
+Instruction Files
+.pytest_chache

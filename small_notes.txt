@@ -1,0 +1,71 @@
+record today 09:30 10:30 'studied Java' :STUDY
+record today 09:30AM 10:30PM 'Go Running' :EXERCISE
+record today 09:30AM 10:30PM 'Go Swimming' :EXERCISE
+record 05/08/2003 09:30AM 10:30PM 'Grocery Shopping' :CHORE
+cloc ..\ --json --exclude-dir=progress,"Instruction Files",prototype_ver1,documents,.pytest_cache,venv,small_notes.txt,tasks.db .
+cloc ..\ --json --exclude-dir=prototype_ver1,venv . --include-lang=Python
+
+query 2002/05/08 2002/09/20
+
+Potential DPs & Refactors
+- Singleton for Date & TimeHelper
+- removing duplicate close/connect code in db_crud.py
+- Use Facade for parse_input_string()
+
+Things left to complete
+- (X) Ver2 manual
+- (X) Ver2 Design
+- (X) Ver2 Tests
+- (X) Ver2 Requirements
+- (X) V1 & V2 Progress
+    - (X) Cloc
+    - (X) Canvas Page
+- (X) Presentation
+- Update Task method
+- Bugs:
+    - Output format could look a bit better
+    - Time is not in consistent format when added to the Database
+    - Datetime string conversion converts but sometimes doesn't
+    - Refactoring Report to have functionality for dates
+    - Refactoring arguments to use argparse instead
+    - Make sure application doesn't close from bad command
+
+Questions:
+- Can we leave our documents in docx format
+- Do we need 2 versions for the presentation?
+- Is it ok if 2 of my design_patterns are Singleton for the refactoring?
+- Do we need 2 versions for the code_smells, refactors, and design patterns?
+- Do I need an update tasks method
+- is Cloc supposed to only count the code? Using python should it include tests?
+- Do I need to use argparse for the arguments
+- How many regression/acceptance tests do we need?
+- Do tests need to be included in the prototype zip file?
+    - Followup??? Do tests need to be for both versions?
+    - Does every single function need to have a test
+
+All items needed for each specific version:
+
+Design
+- Design document
+- UML
+
+Requirements
+- requirements
+
+Manual
+- Manual document
+
+Tests
+- Unit Tests for different functions
+- At least one integration test
+- Regression tests
+- Acceptance tests
+
+Progress files (Via cloc)
+- Cloc progress files
+
+All items needed for both
+- Code smells
+- Refactors
+- Design patterns
+- Presentation
