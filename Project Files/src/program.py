@@ -31,6 +31,7 @@ def parse_input_string(input_string):
     #Run if deleting tasks
     elif command in deleteCommands:
         db_crud.delete_all_tasks()
+    #Run if reporting
     elif command in reportCommands:
         if input_string.strip().lower() in reportCommands:
             report_builder = ReportBuilder()
@@ -42,6 +43,10 @@ def parse_input_string(input_string):
             end_date_index = 2
             start_date = input_string.split()[start_date_index]
             end_date = input_string.split()[end_date_index]
+            if "today" in input_string.split()[1]:
+                start_date = datetime.today().strftime('%Y/%m/%d')
+            elif "today" in input_string.split()[2]:
+                end_date = datetime.today().strftime('%Y/%m/%d')
             print(db_crud.format_tasks(db_crud.query_tasks_by_date_range(start_date, end_date)))
             return
         else:
